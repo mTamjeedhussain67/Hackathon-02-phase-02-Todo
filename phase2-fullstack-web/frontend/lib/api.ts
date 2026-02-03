@@ -34,7 +34,7 @@ async function request<T>(
       try {
         const user = JSON.parse(userStr);
         userId = user.id;
-      } catch (e) {
+      } catch {
         // Invalid JSON, ignore
       }
     }

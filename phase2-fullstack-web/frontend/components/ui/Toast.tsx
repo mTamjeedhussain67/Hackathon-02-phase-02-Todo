@@ -27,6 +27,10 @@ const ToastContext = createContext<ToastContextType | undefined>(undefined);
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
+  const hideToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  }, []);
+
   const showToast = useCallback(
     (type: ToastType, message: string, duration?: number) => {
       const id = Math.random().toString(36).substring(2, 9);
@@ -47,12 +51,8 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         hideToast(id);
       }, duration ?? defaultDuration);
     },
-    []
+    [hideToast]
   );
-
-  const hideToast = useCallback((id: string) => {
-    setToasts((prev) => prev.filter((toast) => toast.id !== id));
-  }, []);
 
   return (
     <ToastContext.Provider value={{ showToast, hideToast }}>
@@ -109,15 +109,15 @@ function ToastItem({
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`
         w-[320px] max-w-[calc(100vw-32px)]
-        bg-white rounded shadow-lg
-        px-16 py-16
+        bg-card border border-indigo-500/10 rounded-xl shadow-2xl
+        px-6 py-4
         border-l-4 ${borderColor}
-        flex items-start gap-12
+        flex items-start gap-3 backdrop-blur-sm
       `}
       role="alert"
     >
       <div className="flex-1">
-        <p className="text-base text-gray-900">{toast.message}</p>
+        <p className="text-sm font-medium text-white">{toast.message}</p>
       </div>
       <button
         onClick={() => onDismiss(toast.id)}

@@ -184,16 +184,16 @@ export default function LoginPage() {
     }
 
     if (focused) {
-      // Focused state - yellow glow
-      return 'w-full px-4 py-3 bg-black border border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)] rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
+      // Focused state - indigo glow
+      return 'w-full px-4 py-3 bg-card border border-indigo-500 bg-indigo-500/5 shadow-[0_0_20px_rgba(99,102,241,0.2)] rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
     }
 
     // Default state
-    return 'w-full px-4 py-3 bg-black border border-yellow-500/30 hover:border-yellow-500/50 rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
+    return 'w-full px-4 py-3 bg-card border border-indigo-500/20 hover:border-indigo-500/40 rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
   };
 
   return (
-    <div className="min-h-screen bg-black flex flex-col" style={{ background: '#0B0B0B' }}>
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Shared Navbar */}
       <Navbar />
 
@@ -216,15 +216,15 @@ export default function LoginPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
               Welcome Back
             </h1>
-            <p className="text-base text-gray-400">
-              Sign in to continue to TaskFlow
+            <p className="text-base text-gray-text">
+              Sign in to continue to Taskify
             </p>
           </motion.div>
 
           {/* Login Form */}
           <motion.div
             variants={fadeInUp}
-            className="bg-black border border-yellow-500/30 rounded-xl p-8"
+            className="bg-card border border-indigo-500/10 rounded-xl p-8 shadow-2xl shadow-black/50"
           >
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               {/* Email Field */}
@@ -282,7 +282,7 @@ export default function LoginPage() {
               <div className="flex justify-end">
                 <a
                   href="#"
-                  className="text-sm text-gray-400 hover:text-yellow-400 transition-colors duration-200"
+                  className="text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200"
                 >
                   Forgot password?
                 </a>
@@ -294,7 +294,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(234,179,8,0.35)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Signing in...' : 'Sign In'}
               </motion.button>
@@ -303,11 +303,11 @@ export default function LoginPage() {
 
           {/* Sign Up Link */}
           <motion.div variants={fadeInUp} className="mt-6 text-center">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-text">
               Don't have an account?{' '}
               <Link
                 href="/signup"
-                className="text-yellow-400 hover:text-yellow-300 transition-colors duration-200 font-medium"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-200 font-medium"
               >
                 Sign up
               </Link>
@@ -317,10 +317,10 @@ export default function LoginPage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-yellow-500/20 py-6 px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-indigo-500/10 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-500 text-sm">
-            © 2026 TaskFlow. All rights reserved.
+          <p className="text-gray-text text-sm">
+            © 2026 Taskify. All rights reserved.
           </p>
         </div>
       </footer>

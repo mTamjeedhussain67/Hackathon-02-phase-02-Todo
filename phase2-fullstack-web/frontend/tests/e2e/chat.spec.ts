@@ -16,7 +16,7 @@ test.describe('Chat Page - Infrastructure Tests', () => {
 
   test('Chat page renders with authentication', async ({ page }) => {
     await page.goto('/chat');
-    await expect(page.getByText('TaskFlow')).toBeVisible();
+    await expect(page.getByText('Taskify')).toBeVisible();
     await expect(page.getByRole('heading', { name: 'AI Chat' })).toBeVisible();
   });
 
@@ -28,7 +28,7 @@ test.describe('Chat Page - Infrastructure Tests', () => {
     // Try to access chat directly
     await page.goto('/chat');
     await expect(page).toHaveURL(/\/login/);
-    await expect(page.getByText('Sign in to continue to TaskFlow')).toBeVisible();
+    await expect(page.getByText('Sign in to continue to Taskify')).toBeVisible();
   });
 
   test('Send message and receive AI response', async ({ page }) => {

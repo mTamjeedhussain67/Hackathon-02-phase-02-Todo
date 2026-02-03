@@ -66,16 +66,6 @@ export function TaskProvider({ children }: TaskProviderProps) {
     return new Promise((resolve) => setTimeout(resolve, 50));
   }, []);
 
-  // Load tasks from API when user logs in
-  useEffect(() => {
-    if (isAuthenticated && user && !authLoading) {
-      loadTasksFromAPI();
-    } else if (!isAuthenticated) {
-      // Clear API tasks when logged out
-      setApiTasks([]);
-    }
-  }, [isAuthenticated, user, authLoading]);
-
   // Load tasks from backend API
   const loadTasksFromAPI = useCallback(async () => {
     setIsLoading(true);
@@ -90,6 +80,16 @@ export function TaskProvider({ children }: TaskProviderProps) {
       setIsLoading(false);
     }
   }, []);
+
+  // Load tasks from API when user logs in
+  useEffect(() => {
+    if (isAuthenticated && user && !authLoading) {
+      loadTasksFromAPI();
+    } else if (!isAuthenticated) {
+      // Clear API tasks when logged out
+      setApiTasks([]);
+    }
+  }, [isAuthenticated, user, authLoading, loadTasksFromAPI]);
 
   // CREATE: Add new task
   const createTask = useCallback(

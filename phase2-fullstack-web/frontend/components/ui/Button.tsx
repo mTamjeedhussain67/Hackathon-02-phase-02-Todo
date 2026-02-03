@@ -17,11 +17,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-yellow-500 text-black shadow-xl hover:shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 focus:ring-4 focus:ring-yellow-400/50',
+    'bg-indigo-600 text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:bg-indigo-500 hover:scale-[1.02] active:scale-[0.98] focus:ring-4 focus:ring-indigo-500/30',
   secondary:
-    'bg-black text-white border-2 border-yellow-500/50 hover:bg-yellow-500/10 hover:border-yellow-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:scale-105 focus:ring-4 focus:ring-yellow-400/50',
+    'bg-background text-white border-2 border-indigo-500/30 hover:bg-indigo-500/10 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/10 hover:scale-[1.02] active:scale-[0.98] focus:ring-4 focus:ring-indigo-500/30',
   danger:
-    'bg-red-600 text-white shadow-xl hover:shadow-2xl hover:shadow-red-600/30 hover:scale-105 focus:ring-4 focus:ring-red-500/50',
+    'bg-rose-600 text-white shadow-lg shadow-rose-500/20 hover:shadow-rose-500/40 hover:bg-rose-500 hover:scale-[1.02] active:scale-[0.98] focus:ring-4 focus:ring-rose-500/30',
 };
 
 export default function Button({

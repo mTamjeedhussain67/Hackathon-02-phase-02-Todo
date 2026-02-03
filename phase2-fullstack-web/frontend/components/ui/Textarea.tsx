@@ -33,8 +33,8 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     `;
 
     const stateStyles = hasError
-      ? 'border-red-400 focus:border-red-500 focus:ring-4 focus:ring-red-300 bg-black/60'
-      : 'border-yellow-500/30 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-400/30 bg-black/60 hover:bg-black/70';
+      ? 'border-rose-500/50 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 bg-card/60'
+      : 'border-indigo-500/10 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 bg-card/40 hover:bg-card/60';
 
     return (
       <div className="w-full">

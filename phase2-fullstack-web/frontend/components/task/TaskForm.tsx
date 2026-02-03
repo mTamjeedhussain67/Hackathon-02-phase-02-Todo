@@ -92,12 +92,15 @@ export default function TaskForm({ onTaskCreated }: TaskFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-black/60 backdrop-blur-lg rounded-2xl shadow-2xl border border-yellow-500/30 p-4 sm:p-6 hover:shadow-3xl hover:border-yellow-500/50 transition-all duration-300"
+      className="bg-card/50 backdrop-blur-lg rounded-2xl shadow-xl border border-indigo-500/10 p-6 sm:p-8 hover:shadow-2xl hover:border-indigo-500/30 transition-all duration-300"
       data-testid="task-form"
     >
-      <h2 className="text-xl font-semibold text-white drop-shadow-md mb-4">
-        ➕ Create New Task
-      </h2>
+      <div className="flex items-center space-x-2 mb-6 text-white group">
+        <span className="text-xl text-indigo-500 group-hover:scale-110 transition-transform duration-300">⚡</span>
+        <h2 className="text-xl font-bold tracking-tight">
+          Create New Task
+        </h2>
+      </div>
 
       <div className="space-y-4">
         {/* T063: Title input (required) */}

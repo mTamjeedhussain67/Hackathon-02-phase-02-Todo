@@ -29,7 +29,7 @@ interface UseTasksReturn {
  */
 export function useTasks(options: UseTasksOptions = {}): UseTasksReturn {
   const { filter = 'all' } = options;
-  const { tasks, isLoading, error, getFilteredTasks } = useTaskContext();
+  const { isLoading, error, getFilteredTasks } = useTaskContext();
 
   // Apply filter using context method
   const filteredTasks = useMemo(() => {
@@ -42,7 +42,7 @@ export function useTasks(options: UseTasksOptions = {}): UseTasksReturn {
     isLoading,
     isError: !!error,
     error: error || undefined,
-    mutate: () => {}, // No-op for compatibility (context updates automatically)
+    mutate: () => { }, // No-op for compatibility (context updates automatically)
   };
 }
 

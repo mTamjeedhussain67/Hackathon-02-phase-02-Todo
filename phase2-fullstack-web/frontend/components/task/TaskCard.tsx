@@ -9,7 +9,7 @@
  * Spec: User Story 7 - Responsive layout requirements
  */
 
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Checkbox from '../ui/Checkbox';
 import EditForm from './EditForm';
@@ -125,7 +125,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
         setIsTogglingCompletion(false);
       }
     }, 300); // T096: 300ms debounce
-  }, [task.id, optimisticStatus, onComplete, showToast]);
+  }, [task.id, optimisticStatus, onComplete, showToast, toggleComplete]);
 
   // Format timestamp to display format - American style
   const formatDate = (isoString: string): string => {
@@ -171,7 +171,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
-        className="bg-black/60 backdrop-blur-lg border border-yellow-500/30 rounded-2xl shadow-2xl p-12 sm:p-16 lg:p-16"
+        className="bg-card/60 backdrop-blur-lg border border-indigo-500/20 rounded-2xl shadow-2xl p-6 sm:p-8"
         data-testid="task-card"
       >
         <EditForm task={task} onSave={handleSave} onCancel={handleCancel} />
@@ -184,7 +184,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="bg-black/60 backdrop-blur-md border border-yellow-500/30 rounded-2xl shadow-xl hover:shadow-2xl hover:border-yellow-500/50 hover:scale-[1.02] transition-all duration-300 p-12 sm:p-16 lg:p-16 group"
+      className="bg-card/40 backdrop-blur-md border border-indigo-500/10 rounded-2xl shadow-xl hover:shadow-2xl hover:border-indigo-500/30 hover:scale-[1.01] transition-all duration-300 p-6 sm:p-8 group"
       data-testid="task-card"
     >
       <div className="flex items-start gap-8">
@@ -202,18 +202,16 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
         {/* Content - center */}
         <div className="flex-1 min-w-0">
           <h3
-            className={`text-base lg:text-lg font-semibold mb-1 leading-snug ${
-              isCompleted ? 'line-through text-gray-400' : 'text-white'
-            }`}
+            className={`text-base lg:text-lg font-semibold mb-1 leading-snug ${isCompleted ? 'line-through text-gray-400' : 'text-white'
+              }`}
             data-testid="task-title"
           >
             {task.title}
           </h3>
 
           <div
-            className={`text-base text-gray-300 mb-2 leading-relaxed ${
-              showExpandButton && !isExpanded ? 'cursor-pointer' : ''
-            }`}
+            className={`text-base text-gray-300 mb-2 leading-relaxed ${showExpandButton && !isExpanded ? 'cursor-pointer' : ''
+              }`}
             onClick={
               showExpandButton ? () => setIsExpanded(!isExpanded) : undefined
             }
@@ -224,7 +222,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
 
           {showExpandButton && (
             <button
-              className="text-sm text-yellow-400 hover:text-yellow-300 font-medium mb-2"
+              className="text-sm text-indigo-400 hover:text-indigo-300 font-medium mb-2"
               onClick={() => setIsExpanded(!isExpanded)}
             >
               {isExpanded ? 'Show less' : 'Show more'}
@@ -244,18 +242,17 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
 
           {/* Task ID - bottom left */}
           <div
-            className="mt-2 text-xs text-gray-400"
-            style={{ fontSize: '12px' }}
+            className="mt-2 text-[10px] text-gray-text opacity-50 font-mono tracking-tight"
             data-testid="task-id"
           >
-            {shortId}
+            #{shortId}
           </div>
         </div>
 
         {/* Action buttons - right side */}
-        <div className="flex flex-col sm:flex-row gap-8">
+        <div className="flex flex-col sm:flex-row gap-3">
           <button
-            className="min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-lg bg-black border border-yellow-500/30 hover:border-yellow-500 text-yellow-400 hover:text-yellow-300 transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-lg bg-indigo-500/5 border border-indigo-500/20 hover:border-indigo-500/50 text-indigo-400 hover:text-indigo-300 transition-all duration-200"
             onClick={handleEditStart}
             aria-label="Edit task"
             data-testid="edit-button"
@@ -277,7 +274,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
           </button>
 
           <button
-            className="min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-lg bg-black border border-red-500/30 hover:border-red-500 text-red-500 hover:text-red-400 transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-lg bg-rose-500/5 border border-rose-500/20 hover:border-rose-500/50 text-rose-500 hover:text-rose-400 transition-all duration-200"
             onClick={() => onDelete?.(task.id)}
             aria-label="Delete task"
             data-testid="delete-button"

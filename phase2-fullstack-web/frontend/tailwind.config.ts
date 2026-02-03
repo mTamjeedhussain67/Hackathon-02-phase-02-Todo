@@ -8,11 +8,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#0066CC',
+        primary: {
+          light: '#818CF8',
+          DEFAULT: '#6366F1',
+          dark: '#4F46E5',
+        },
         success: '#10B981',
         error: '#EF4444',
-        'gray-text': '#6B7280',
-        border: '#E5E7EB',
+        'gray-text': '#94A3B8',
+        border: '#1E293B',
+        background: '#0B0E14',
+        card: '#161B22',
       },
       spacing: {
         '4': '4px',
