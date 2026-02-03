@@ -2,7 +2,6 @@
  * Landing Page - Professional Home Page for Todo Application
  * Polished, premium design with calm animations
  * Focus on clarity, simplicity, and professionalism
- * Phase 3: Integrated with AI Chatbot via shared Navbar
  */
 
 'use client';
@@ -43,7 +42,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-black" style={{ background: '#0B0B0B' }}>
-      {/* Shared Navbar with AI Chat button */}
+      {/* Shared Navbar */}
       <Navbar />
 
       {/* Hero Section */}
@@ -206,23 +205,6 @@ export default function LandingPage() {
               </p>
             </motion.div>
 
-            {/* Feature 6 */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-black border border-yellow-500/30 rounded-lg p-6 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300 relative overflow-hidden"
-            >
-              <div className="absolute top-2 right-2 px-2 py-0.5 bg-yellow-500 text-black text-xs font-bold rounded-full">NEW</div>
-              <div className="text-3xl mb-3 opacity-90">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                AI Assistant
-              </h3>
-              <p className="text-gray-400 leading-relaxed text-sm">
-                Intelligent chatbot to help manage your tasks via natural language
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
