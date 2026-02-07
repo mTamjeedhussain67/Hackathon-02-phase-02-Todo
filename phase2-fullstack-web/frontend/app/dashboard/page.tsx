@@ -5,7 +5,7 @@
 
 'use client';
 
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import TaskList from '@/components/task/TaskList';
@@ -25,7 +25,6 @@ export default function DashboardPage() {
   const { isAuthenticated, user } = useAuth();
   const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
   const { tasks, isLoading, isError, error, mutate } = useTasks({ filter });
-  const [isNewUser, setIsNewUser] = useState(false);
 
   // Modal state management
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
@@ -43,12 +42,10 @@ export default function DashboardPage() {
   React.useEffect(() => {
     const newUserFlag = localStorage.getItem('isNewUser');
     if (newUserFlag === 'true') {
-      setIsNewUser(true);
-      // Clear the flag after showing the welcome message
+      // Clear the flag after 5 seconds
       setTimeout(() => {
         localStorage.removeItem('isNewUser');
-        setIsNewUser(false);
-      }, 5000); // Clear after 5 seconds
+      }, 5000);
     }
   }, []);
 
@@ -66,11 +63,11 @@ export default function DashboardPage() {
     router.push('/');
   };
 
-  const handleComplete = (_taskId: string) => {
+  const handleComplete = () => {
     mutate();
   };
 
-  const handleEdit = (_taskId: string) => {
+  const handleEdit = () => {
     mutate();
   };
 

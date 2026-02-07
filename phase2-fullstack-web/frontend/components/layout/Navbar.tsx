@@ -18,11 +18,10 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  onLogout,
   showDashboardLink = true,
 }) => {
   const pathname = usePathname();
-  const { isAuthenticated, user, logout } = useAuth();
+  const { isAuthenticated, user } = useAuth();
 
   // const handleLogout = async () => {
   //   await logout();
