@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="w-full px-4 sm:px-6 lg:px-8 py-4 border-b border-indigo-500/20 bg-background/80 backdrop-blur-sm sticky top-0 z-30"
+      className="w-full px-4 sm:px-6 lg:px-8 py-4 border-b border-amber-500/20 bg-background/80 backdrop-blur-sm sticky top-0 z-30"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo - hide title on mobile to save space */}
@@ -50,13 +50,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           <motion.div
             whileHover={{ rotate: 10, scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 400 }}
-            className="text-indigo-500"
+            className="text-amber-500"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </motion.div>
-          <span className="hidden sm:inline text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Taskify</span>
+          <span className="hidden sm:inline text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Tamjeed's Tasks</span>
         </Link>
 
         {/* Navigation Links */}
@@ -67,13 +67,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               key={href}
               href={href}
               className={`relative px-2 sm:px-3 py-2 text-sm font-medium transition-colors duration-200 group ${isActive(href)
-                ? 'text-indigo-400'
-                : 'text-gray-400 hover:text-indigo-400'
+                ? 'text-amber-400'
+                : 'text-gray-400 hover:text-amber-400'
                 }`}
             >
               {label}
               <span
-                className={`absolute -bottom-0.5 left-2 right-2 h-0.5 bg-indigo-500 transition-all duration-300 ${isActive(href) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                className={`absolute -bottom-0.5 left-2 right-2 h-0.5 bg-amber-500 transition-all duration-300 ${isActive(href) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                   }`}
               />
             </Link>
@@ -84,13 +84,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <Link
               href="/dashboard"
               className={`relative px-2 sm:px-3 py-2 text-sm font-medium transition-colors duration-200 group ${isActive('/dashboard')
-                ? 'text-indigo-400'
-                : 'text-gray-400 hover:text-indigo-400'
+                ? 'text-amber-400'
+                : 'text-gray-400 hover:text-amber-400'
                 }`}
             >
               Dashboard
               <span
-                className={`absolute -bottom-0.5 left-2 right-2 h-0.5 bg-indigo-500 transition-all duration-300 ${isActive('/dashboard') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                className={`absolute -bottom-0.5 left-2 right-2 h-0.5 bg-amber-500 transition-all duration-300 ${isActive('/dashboard') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                   }`}
               />
             </Link>
@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {isAuthenticated ? (
             <div className="flex items-center gap-2 ml-2">
               {/* User indicator - logout is in footer */}
-              <span className="hidden md:inline text-xs text-gray-400 px-2 py-1 bg-indigo-500/10 rounded-md border border-indigo-500/20">
+              <span className="hidden md:inline text-xs text-gray-400 px-2 py-1 bg-amber-500/10 rounded-md border border-amber-500/20">
                 {user?.name || user?.email?.split('@')[0]}
               </span>
             </div>
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Link
                 href="/login"
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive('/login')
-                  ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
+                  ? 'bg-amber-500/20 text-amber-500 border border-amber-500/30'
                   : 'text-gray-400 hover:text-white'
                   }`}
               >
@@ -118,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </Link>
               <Link
                 href="/signup"
-                className="px-4 py-2 text-sm rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-colors duration-200 shadow-lg shadow-indigo-500/20"
+                className="px-4 py-2 text-sm rounded-lg bg-amber-500 text-black font-bold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/20"
               >
                 Sign Up
               </Link>

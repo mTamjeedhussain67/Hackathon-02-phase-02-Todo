@@ -62,36 +62,36 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Simple Top Bar */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-5 border-b border-indigo-500/10 bg-background/80 backdrop-blur-sm sticky top-0 z-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-5 border-b border-amber-500/10 bg-background/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Product Name */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-xl text-indigo-500 transition-transform group-hover:scale-110 duration-200">⚡</span>
-            <span className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Taskify</span>
+            <span className="text-xl text-amber-500 transition-transform group-hover:scale-110 duration-200">⚡</span>
+            <span className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Tamjeed's Tasks</span>
           </Link>
 
           {/* Navigation Buttons */}
           <div className="flex items-center space-x-8">
             <Link
               href="/"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
+              className="relative text-sm text-gray-text hover:text-amber-400 transition-colors duration-200 group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="/about"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
+              className="relative text-sm text-gray-text hover:text-amber-400 transition-colors duration-200 group"
             >
               About Us
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="/contact"
               className="relative text-sm text-white transition-colors duration-200 group"
             >
               Contact Us
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-indigo-500"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-amber-500"></span>
             </Link>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <motion.div
             variants={fadeInUp}
-            className="bg-card border border-indigo-500/10 rounded-xl p-8 sm:p-10 shadow-2xl shadow-black/50"
+            className="bg-card border border-amber-500/10 rounded-xl p-8 sm:p-10 shadow-2xl shadow-black/50"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
@@ -142,8 +142,8 @@ export default function ContactPage() {
                   onBlur={() => handleBlur('name')}
                   required
                   className={`w-full px-4 py-3 bg-card border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.message
-                      ? 'border-indigo-500 bg-indigo-500/5 shadow-[0_0_20px_rgba(99,102,241,0.2)]'
-                      : 'border-indigo-500/20 hover:border-indigo-500/40'
+                    ? 'border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(99,102,241,0.2)]'
+                    : 'border-amber-500/20 hover:border-amber-500/40'
                     }`}
                   placeholder="Your name"
                 />
@@ -164,8 +164,8 @@ export default function ContactPage() {
                   onBlur={() => handleBlur('email')}
                   required
                   className={`w-full px-4 py-3 bg-black border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.email
-                      ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
-                      : 'border-yellow-500/30 hover:border-yellow-500/50'
+                    ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
+                    : 'border-yellow-500/30 hover:border-yellow-500/50'
                     }`}
                   placeholder="your.email@example.com"
                 />
@@ -186,8 +186,8 @@ export default function ContactPage() {
                   required
                   rows={6}
                   className={`w-full px-4 py-3 bg-black border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 resize-none ${isFocused.message
-                      ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
-                      : 'border-yellow-500/30 hover:border-yellow-500/50'
+                    ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
+                    : 'border-yellow-500/30 hover:border-yellow-500/50'
                     }`}
                   placeholder="Tell us what's on your mind..."
                 />
@@ -198,7 +198,7 @@ export default function ContactPage() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-background"
+                className="w-full bg-amber-500 text-black px-8 py-3 rounded-lg font-bold hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-background"
               >
                 Send Message
               </motion.button>
@@ -213,10 +213,10 @@ export default function ContactPage() {
             <p className="text-gray-text text-sm">
               You can also reach us at{' '}
               <a
-                href="mailto:hello@taskify.app"
-                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-200 underline decoration-indigo-500/40 hover:decoration-indigo-500/70"
+                href="mailto:hello@tamjeed.tasks"
+                className="text-amber-400 hover:text-amber-300 transition-colors duration-200 underline decoration-amber-500/40 hover:decoration-amber-500/70"
               >
-                hello@taskify.app
+                hello@tamjeed.tasks
               </a>
             </p>
           </motion.div>
@@ -224,10 +224,10 @@ export default function ContactPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-indigo-500/10 py-8 px-4 sm:px-6 lg:px-8 mt-20">
+      <footer className="border-t border-amber-500/10 py-8 px-4 sm:px-6 lg:px-8 mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-text text-sm">
-            © 2026 Taskify. All rights reserved.
+            © 2026 Tamjeed's Tasks. All rights reserved.
           </p>
         </div>
       </footer>

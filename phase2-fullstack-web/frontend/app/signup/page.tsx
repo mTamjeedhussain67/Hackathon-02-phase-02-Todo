@@ -100,14 +100,14 @@ export default function SignupPage() {
               Create Account
             </h1>
             <p className="text-base text-gray-text">
-              Start organizing your tasks with Taskify
+              Start organizing your tasks with Tamjeed's Tasks
             </p>
           </motion.div>
 
           {/* Signup Form */}
           <motion.div
             variants={fadeInUp}
-            className="bg-card border border-indigo-500/10 rounded-xl p-8 shadow-2xl shadow-black/50"
+            className="bg-card border border-amber-500/10 rounded-xl p-8 shadow-2xl shadow-black/50"
           >
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name Field */}
@@ -124,9 +124,9 @@ export default function SignupPage() {
                   onFocus={() => handleFocus('name')}
                   onBlur={() => handleBlur('name')}
                   required
-                  className={`w-full px-4 py-3 bg-card border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.confirmPassword
-                      ? 'border-indigo-500 bg-indigo-500/5 shadow-[0_0_20px_rgba(99,102,241,0.2)]'
-                      : 'border-indigo-500/20 hover:border-indigo-500/40'
+                  className={`w-full px-4 py-3 bg-card border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.name
+                    ? 'border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(212,175,55,0.2)]'
+                    : 'border-amber-500/20 hover:border-amber-500/40'
                     }`}
                   placeholder="Your name"
                 />
@@ -147,8 +147,8 @@ export default function SignupPage() {
                   onBlur={() => handleBlur('email')}
                   required
                   className={`w-full px-4 py-3 bg-black border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.email
-                      ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
-                      : 'border-yellow-500/30 hover:border-yellow-500/50'
+                    ? 'border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(212,175,55,0.2)]'
+                    : 'border-amber-500/30 hover:border-amber-500/50'
                     }`}
                   placeholder="your.email@example.com"
                 />
@@ -169,8 +169,8 @@ export default function SignupPage() {
                   onBlur={() => handleBlur('password')}
                   required
                   className={`w-full px-4 py-3 bg-black border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.password
-                      ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
-                      : 'border-yellow-500/30 hover:border-yellow-500/50'
+                    ? 'border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(212,175,55,0.2)]'
+                    : 'border-amber-500/30 hover:border-amber-500/50'
                     }`}
                   placeholder="••••••••"
                 />
@@ -191,8 +191,8 @@ export default function SignupPage() {
                   onBlur={() => handleBlur('confirmPassword')}
                   required
                   className={`w-full px-4 py-3 bg-black border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300 ${isFocused.confirmPassword
-                      ? 'border-yellow-500 bg-yellow-500/5 shadow-[0_0_20px_rgba(234,179,8,0.2)]'
-                      : 'border-yellow-500/30 hover:border-yellow-500/50'
+                    ? 'border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(212,175,55,0.2)]'
+                    : 'border-amber-500/30 hover:border-amber-500/50'
                     }`}
                   placeholder="••••••••"
                 />
@@ -204,7 +204,7 @@ export default function SignupPage() {
                 disabled={isLoading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-amber-500 text-black px-8 py-3 rounded-lg font-bold hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Creating account...' : 'Create Account'}
               </motion.button>
@@ -217,7 +217,7 @@ export default function SignupPage() {
               Already have an account?{' '}
               <Link
                 href="/login"
-                className="text-indigo-400 hover:text-indigo-300 transition-colors duration-200 font-medium"
+                className="text-amber-400 hover:text-amber-300 transition-colors duration-200 font-medium"
               >
                 Sign in
               </Link>
@@ -227,10 +227,10 @@ export default function SignupPage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-indigo-500/10 py-6 px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-amber-500/10 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-text text-sm">
-            © 2026 Taskify. All rights reserved.
+            © 2026 Tamjeed's Tasks. All rights reserved.
           </p>
         </div>
       </footer>

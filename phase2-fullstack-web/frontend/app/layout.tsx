@@ -6,8 +6,8 @@ import { AuthProvider } from '@/lib/context/AuthContext';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Task Management System',
-  description: 'Phase II Full-Stack Web Todo Application',
+  title: "M. Tamjeed's Task System",
+  description: 'Premium Phase II Full-Stack Web Todo Application by Muhammad Tamjeed Hussain',
 };
 
 export default function RootLayout({

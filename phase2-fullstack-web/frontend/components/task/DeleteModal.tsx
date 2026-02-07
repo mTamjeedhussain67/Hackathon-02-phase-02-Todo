@@ -61,7 +61,7 @@ export default function DeleteModal({
 
           {/* Modal - T137: 400px desktop, 90% mobile - Glassmorphism */}
           <motion.div
-            className="relative bg-card border border-indigo-500/10 rounded-2xl shadow-2xl w-full max-w-md sm:max-w-[400px] p-8"
+            className="relative bg-card border border-amber-500/10 rounded-2xl shadow-2xl w-full max-w-md sm:max-w-[400px] p-8"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}

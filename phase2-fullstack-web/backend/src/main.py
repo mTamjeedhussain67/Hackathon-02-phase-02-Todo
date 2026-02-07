@@ -12,8 +12,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI(
-    title="Todo API",
-    description="Phase II Full-Stack Web Todo Application - Backend API",
+    title="Todo API - Muhammad Tamjeed Hussain",
+    description="Phase II Full-Stack Web Todo Application - Professional Backend API",
     version="0.1.0",
 )
 
@@ -44,7 +44,7 @@ async def on_startup():
 async def root():
     """Health check endpoint."""
     return {
-        "message": "Todo API - Phase II",
+        "message": "Tamjeed's Task System API - Phase II",
         "version": "0.1.0",
         "status": "running",
     }

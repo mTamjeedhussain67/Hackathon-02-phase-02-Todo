@@ -1,7 +1,6 @@
 /**
- * About Us Page
- * Professional, product-focused explanation of Taskify's mission and values
- * Polished with premium micro-animations
+ * About Us Page - Premium Design
+ * High-end explanation of Muhammad Tamjeed Hussain's task management philosophy
  */
 
 'use client';
@@ -9,209 +8,99 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Navbar } from '@/components/layout';
 
 export default function AboutPage() {
-  // Refined animation variants
   const fadeInUp = {
-    initial: { opacity: 0, y: 16 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.1,
       },
     },
   };
 
-  const sectionFadeIn = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      {/* Simple Top Bar */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-5 border-b border-indigo-500/10 bg-background/80 backdrop-blur-sm sticky top-0 z-20">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          {/* Product Name */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-xl text-indigo-500 transition-transform group-hover:scale-110 duration-200">⚡</span>
-            <span className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Taskify</span>
-          </Link>
+    <div className="min-h-screen bg-[#020617] text-white">
+      <Navbar />
 
-          {/* Navigation Buttons */}
-          <div className="flex items-center space-x-8">
-            <Link
-              href="/"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              href="/about"
-              className="relative text-sm text-white transition-colors duration-200 group"
-            >
-              About Us
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-indigo-500"></span>
-            </Link>
-            <Link
-              href="/contact"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
-            >
-              Contact Us
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <motion.div
           initial="initial"
           animate="animate"
           variants={staggerContainer}
+          className="text-center mb-24"
         >
-          {/* Page Title - Soft fade-in with upward motion */}
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl sm:text-5xl font-bold text-white mb-6 text-center"
+            className="text-5xl sm:text-7xl font-black mb-8 tracking-tight"
           >
-            About Us
+            Built for <br />
+            <span className="premium-gradient-text drop-shadow-[0_0_20px_rgba(129,140,248,0.2)]">
+              Digital Excellence
+            </span>
           </motion.h1>
 
-          {/* Mission Statement */}
           <motion.p
             variants={fadeInUp}
-            className="text-xl text-gray-text mb-16 text-center max-w-3xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            We believe productivity should be simple, not overwhelming.
-            Taskify helps you organize your work and life with clarity and focus.
+            Task management shouldn't be a chore. We engineering systems that disappear into your workflow, letting your creativity take center stage.
           </motion.p>
+        </motion.div>
 
-          {/* Content Sections - Staggered fade-in on scroll */}
-          <div className="space-y-12">
-            {/* Problem We Solve */}
-            <motion.section
-              {...sectionFadeIn}
-              className="bg-card border border-indigo-500/10 rounded-xl p-8 sm:p-10 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/5 transition-all duration-300"
-            >
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                The Problem We Solve
-              </h2>
-              <p className="text-gray-text leading-relaxed text-base mb-4">
-                Most task management tools are bloated with features you don't need. They try to do everything
-                and end up making simple tasks complicated.
-              </p>
-              <p className="text-gray-text leading-relaxed text-base">
-                We saw people struggling with overcomplicated systems when all they needed was a clear,
-                straightforward way to track what matters. That's why we built Taskify.
-              </p>
-            </motion.section>
-
-            {/* How We Help */}
-            <motion.section
-              {...sectionFadeIn}
-              transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-black border border-yellow-500/30 rounded-xl p-8 sm:p-10 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300"
-            >
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                How TaskFlow Helps You
-              </h2>
-              <p className="text-gray-400 leading-relaxed text-base mb-4">
-                TaskFlow strips away the complexity and gives you exactly what you need: a beautiful,
-                fast interface to capture tasks, organize priorities, and get things done.
-              </p>
-              <p className="text-gray-400 leading-relaxed text-base mb-4">
-                No learning curve. No feature overload. Just open it and start working.
-              </p>
-              <p className="text-gray-400 leading-relaxed text-base">
-                Whether you're managing personal projects, work deadlines, or daily routines,
-                TaskFlow adapts to your workflow without getting in your way.
-              </p>
-            </motion.section>
-
-            {/* Vision & Values */}
-            <motion.section
-              {...sectionFadeIn}
-              transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-black border border-yellow-500/30 rounded-xl p-8 sm:p-10 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300"
-            >
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                Our Vision & Values
-              </h2>
-              <div className="space-y-4">
-                <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-200">
-                    Focus
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed text-base">
-                    We design for clarity. Every feature exists to help you focus on what matters,
-                    not to impress you with options.
-                  </p>
-                </div>
-                <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-200">
-                    Simplicity
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed text-base">
-                    Complexity is easy. True simplicity requires discipline. We say no to features
-                    that don't serve your core workflow.
-                  </p>
-                </div>
-                <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors duration-200">
-                    Productivity
-                  </h3>
-                  <p className="text-gray-text leading-relaxed text-base">
-                    Your time is valuable. Taskify is built to be fast, reliable, and respectful
-                    of your attention. No distractions, no friction.
-                  </p>
-                </div>
-              </div>
-            </motion.section>
-          </div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-16 text-center"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+          <motion.section
+            {...fadeInUp}
+            className="glass-card p-10 rounded-[2.5rem] border-white/5"
           >
-            <p className="text-gray-text mb-6 text-lg">
-              Ready to simplify your workflow?
+            <h2 className="text-3xl font-bold mb-6">The Philosophy</h2>
+            <p className="text-slate-400 text-lg leading-relaxed mb-6">
+              Most tools add noise. <span className="text-amber-500 font-bold">Tamjeed's Task System</span> removes it. We believe in high-density information with low-friction interaction.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <Link
-                href="/login"
-                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:scale-105 active:scale-100 transition-all duration-300"
-              >
-                Start Free
-              </Link>
-              <Link
-                href="/dashboard"
-                className="inline-block bg-background border-2 border-indigo-500/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500/10 hover:border-indigo-500 hover:scale-105 active:scale-100 transition-all duration-300"
-              >
-                View Dashboard
-              </Link>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              By leveraging modern web technology, we've created a system that feels like an extension of your own mind.
+            </p>
+          </motion.section>
+
+          <motion.section
+            {...fadeInUp}
+            transition={{ delay: 0.1 }}
+            className="glass-card p-10 rounded-[2.5rem] border-white/5 bg-gradient-to-br from-amber-500/5 to-transparent"
+          >
+            <h2 className="text-3xl font-bold mb-6">The Architect</h2>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Conceptualized and developed by <span className="text-white font-bold underline decoration-amber-500 underline-offset-4">Muhammad Tamjeed Hussain</span>, this system represents the pinnacle of Phase II full-stack integration.
+            </p>
+            <div className="mt-8 flex gap-4">
+              <div className="px-4 py-2 glass-card rounded-full text-xs font-bold uppercase tracking-widest text-amber-500">FastAPI</div>
+              <div className="px-4 py-2 glass-card rounded-full text-xs font-bold uppercase tracking-widest text-amber-400">Next.js 15</div>
+              <div className="px-4 py-2 glass-card rounded-full text-xs font-bold uppercase tracking-widest text-amber-300">SQLModel</div>
             </div>
-          </motion.div>
+          </motion.section>
+        </div>
+
+        <motion.div
+          {...fadeInUp}
+          className="text-center"
+        >
+          <p className="text-slate-500 font-bold tracking-[0.3em] uppercase mb-8">Ready to start?</p>
+          <Link href="/signup">
+            <button className="glow-button px-12 py-5 rounded-2xl font-black text-xl">JOIN THE SYSTEM</button>
+          </Link>
         </motion.div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-indigo-500/10 py-8 px-4 sm:px-6 lg:px-8 mt-20">
+      <footer className="border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-text text-sm">
-            © 2026 Taskify. All rights reserved.
+          <p className="text-slate-500 text-xs font-bold tracking-[0.2em] uppercase">
+            © 2026 Tamjeed's Tasks | Muhammad Tamjeed Hussain
           </p>
         </div>
       </footer>
