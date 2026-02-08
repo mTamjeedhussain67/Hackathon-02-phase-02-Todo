@@ -185,11 +185,11 @@ export default function LoginPage() {
 
     if (focused) {
       // Focused state - indigo glow
-      return 'w-full px-4 py-3 bg-card border border-amber-500 bg-amber-500/5 shadow-[0_0_20px_rgba(212,175,55,0.2)] rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
+      return 'w-full px-4 py-3 bg-card border border-primary bg-primary/5 shadow-[0_0_20px_rgba(99,102,241,0.2)] rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
     }
 
     // Default state
-    return 'w-full px-4 py-3 bg-card border border-amber-500/20 hover:border-amber-500/40 rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
+    return 'w-full px-4 py-3 bg-card border border-primary/20 hover:border-primary/40 rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all duration-300';
   };
 
   return (
@@ -217,14 +217,14 @@ export default function LoginPage() {
               Welcome Back
             </h1>
             <p className="text-base text-gray-text">
-              Sign in to continue to Tamjeed's Tasks
+              Sign in to continue to Taskify
             </p>
           </motion.div>
 
           {/* Login Form */}
           <motion.div
             variants={fadeInUp}
-            className="bg-card border border-amber-500/10 rounded-xl p-8 shadow-2xl shadow-black/50"
+            className="bg-card border border-primary/10 rounded-xl p-8 shadow-2xl shadow-black/50"
           >
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               {/* Email Field */}
@@ -282,7 +282,7 @@ export default function LoginPage() {
               <div className="flex justify-end">
                 <a
                   href="#"
-                  className="text-sm text-gray-text hover:text-amber-400 transition-colors duration-200"
+                  className="text-sm text-gray-text hover:text-primary-light transition-colors duration-200"
                 >
                   Forgot password?
                 </a>
@@ -294,7 +294,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-amber-500 text-black px-8 py-3 rounded-lg font-bold hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-primary-dark text-white px-8 py-3 rounded-lg font-bold hover:bg-primary hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Signing in...' : 'Sign In'}
               </motion.button>
@@ -307,7 +307,7 @@ export default function LoginPage() {
               Don't have an account?{' '}
               <Link
                 href="/signup"
-                className="text-amber-400 hover:text-amber-300 transition-colors duration-200 font-medium"
+                className="text-primary-light hover:text-indigo-300 transition-colors duration-200 font-medium"
               >
                 Sign up
               </Link>
@@ -317,10 +317,10 @@ export default function LoginPage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-amber-500/10 py-6 px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-primary/10 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-text text-sm">
-            © 2026 Tamjeed's Tasks. All rights reserved.
+            © 2026 Taskify. All rights reserved.
           </p>
         </div>
       </footer>

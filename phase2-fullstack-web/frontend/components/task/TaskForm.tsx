@@ -92,11 +92,11 @@ export default function TaskForm({ onTaskCreated }: TaskFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-card/50 backdrop-blur-lg rounded-2xl shadow-xl border border-amber-500/10 p-6 sm:p-8 hover:shadow-2xl hover:border-amber-500/30 transition-all duration-300"
+      className="bg-card/50 backdrop-blur-lg rounded-2xl shadow-xl border border-primary/10 p-6 sm:p-8 hover:shadow-2xl hover:border-primary/30 transition-all duration-300"
       data-testid="task-form"
     >
       <div className="flex items-center space-x-2 mb-6 text-white group">
-        <span className="text-xl text-amber-500 group-hover:scale-110 transition-transform duration-300">⚡</span>
+        <span className="text-xl text-primary group-hover:scale-110 transition-transform duration-300">⚡</span>
         <h2 className="text-xl font-bold tracking-tight">
           Create New Task
         </h2>
