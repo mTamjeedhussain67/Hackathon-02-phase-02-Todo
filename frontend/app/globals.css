@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background: #0B0E14;
-  --card-background: #161B22;
-  --accent-indigo: #6366F1;
+  --foreground-rgb: 230, 230, 230;
+  --background: #050505;
+  --card-background: #0F0F0F;
+  --accent-gold: #D4AF37;
 }
 
 body {

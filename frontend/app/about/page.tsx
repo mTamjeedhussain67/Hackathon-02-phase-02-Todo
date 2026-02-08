@@ -36,36 +36,36 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Simple Top Bar */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-5 border-b border-indigo-500/10 bg-background/80 backdrop-blur-sm sticky top-0 z-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-5 border-b border-primary/10 bg-background/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Product Name */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-xl text-indigo-500 transition-transform group-hover:scale-110 duration-200">⚡</span>
-            <span className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Taskify</span>
+            <span className="text-xl text-primary transition-transform group-hover:scale-110 duration-200">⚡</span>
+            <span className="text-lg font-bold text-white group-hover:text-primary-light transition-colors">Taskify</span>
           </Link>
 
           {/* Navigation Buttons */}
           <div className="flex items-center space-x-8">
             <Link
               href="/"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
+              className="relative text-sm text-gray-text hover:text-primary-light transition-colors duration-200 group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               href="/about"
               className="relative text-sm text-white transition-colors duration-200 group"
             >
               About Us
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-indigo-500"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"></span>
             </Link>
             <Link
               href="/contact"
-              className="relative text-sm text-gray-text hover:text-indigo-400 transition-colors duration-200 group"
+              className="relative text-sm text-gray-text hover:text-primary-light transition-colors duration-200 group"
             >
               Contact Us
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </Link>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             {/* Problem We Solve */}
             <motion.section
               {...sectionFadeIn}
-              className="bg-card border border-indigo-500/10 rounded-xl p-8 sm:p-10 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/5 transition-all duration-300"
+              className="bg-card border border-primary/10 rounded-xl p-8 sm:p-10 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300"
             >
               <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
                 The Problem We Solve
@@ -115,17 +115,16 @@ export default function AboutPage() {
               </p>
             </motion.section>
 
-            {/* How We Help */}
             <motion.section
               {...sectionFadeIn}
               transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-black border border-yellow-500/30 rounded-xl p-8 sm:p-10 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300"
+              className="bg-black border border-primary/30 rounded-xl p-8 sm:p-10 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                How TaskFlow Helps You
+                How Taskify Helps You
               </h2>
               <p className="text-gray-400 leading-relaxed text-base mb-4">
-                TaskFlow strips away the complexity and gives you exactly what you need: a beautiful,
+                Taskify strips away the complexity and gives you exactly what you need: a beautiful,
                 fast interface to capture tasks, organize priorities, and get things done.
               </p>
               <p className="text-gray-400 leading-relaxed text-base mb-4">
@@ -133,7 +132,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-400 leading-relaxed text-base">
                 Whether you're managing personal projects, work deadlines, or daily routines,
-                TaskFlow adapts to your workflow without getting in your way.
+                Taskify adapts to your workflow without getting in your way.
               </p>
             </motion.section>
 
@@ -148,7 +147,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-200">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-200">
                     Focus
                   </h3>
                   <p className="text-gray-400 leading-relaxed text-base">
@@ -157,7 +156,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-200">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-200">
                     Simplicity
                   </h3>
                   <p className="text-gray-400 leading-relaxed text-base">
@@ -166,7 +165,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="group">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors duration-200">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary-light transition-colors duration-200">
                     Productivity
                   </h3>
                   <p className="text-gray-text leading-relaxed text-base">
@@ -192,13 +191,13 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <Link
                 href="/login"
-                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:scale-105 active:scale-100 transition-all duration-300"
+                className="inline-block bg-primary-dark text-white px-8 py-3 rounded-lg font-bold hover:bg-primary hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:scale-105 active:scale-100 transition-all duration-300"
               >
                 Start Free
               </Link>
               <Link
                 href="/dashboard"
-                className="inline-block bg-background border-2 border-indigo-500/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-500/10 hover:border-indigo-500 hover:scale-105 active:scale-100 transition-all duration-300"
+                className="inline-block bg-background border-2 border-primary/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/10 hover:border-primary hover:scale-105 active:scale-100 transition-all duration-300"
               >
                 View Dashboard
               </Link>
@@ -208,7 +207,7 @@ export default function AboutPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-indigo-500/10 py-8 px-4 sm:px-6 lg:px-8 mt-20">
+      <footer className="border-t border-primary/10 py-8 px-4 sm:px-6 lg:px-8 mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-text text-sm">
             © 2026 Taskify. All rights reserved.

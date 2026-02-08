@@ -9,16 +9,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          light: '#818CF8',
-          DEFAULT: '#6366F1',
-          dark: '#4F46E5',
+          light: '#F4D03F', // Lighter gold/yellow
+          DEFAULT: '#D4AF37', // Classic metallic gold
+          dark: '#996515', // Deep golden/brown accent
         },
         success: '#10B981',
         error: '#EF4444',
-        'gray-text': '#94A3B8',
-        border: '#1E293B',
-        background: '#0B0E14',
-        card: '#161B22',
+        'gray-text': '#A0A0A0', // Muted silver/gray text
+        border: '#2C2514', // Very dark gold-tinted border
+        background: '#050505', // Deep classy black
+        card: '#0F0F0F', // Slightly lighter black for surfaces
       },
       spacing: {
         '4': '4px',

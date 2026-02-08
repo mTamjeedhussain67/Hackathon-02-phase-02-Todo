@@ -139,19 +139,19 @@ export default function DashboardPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
               {isAuthenticated ? (
                 isNewUser ? (
-                  <>Welcome, <span className="text-indigo-500">{user?.name || user?.email?.split('@')[0] || 'User'}</span>!</>
+                  <>Welcome, <span className="text-primary">{user?.name || user?.email?.split('@')[0] || 'User'}</span>!</>
                 ) : (
-                  <>Welcome back, <span className="text-indigo-500">{user?.name || user?.email?.split('@')[0] || 'User'}</span>!</>
+                  <>Welcome back, <span className="text-primary">{user?.name || user?.email?.split('@')[0] || 'User'}</span>!</>
                 )
               ) : (
-                <>Welcome, <span className="text-indigo-500">Guest</span>!</>
+                <>Welcome, <span className="text-primary">Guest</span>!</>
               )}
             </h1>
             <p className="text-gray-text text-base">
               {isAuthenticated ? (
-                <>Your tasks are <span className="text-indigo-400 font-medium">securely saved</span> in the database.</>
+                <>Your tasks are <span className="text-primary-light font-medium">securely saved</span> in the database.</>
               ) : (
-                <>You're in guest mode. <span className="text-indigo-400 font-medium">Login to save</span> your tasks!</>
+                <>You're in guest mode. <span className="text-primary-light font-medium">Login to save</span> your tasks!</>
               )}
             </p>
           </motion.div>
@@ -167,7 +167,7 @@ export default function DashboardPage() {
             <motion.div
               whileHover={{ scale: 1.02, y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-card border border-indigo-500/10 rounded-xl p-5 hover:border-indigo-500/30 transition-all duration-300 shadow-lg hover:shadow-indigo-500/5"
+              className="bg-card border border-primary/10 rounded-xl p-5 hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/5"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -181,8 +181,8 @@ export default function DashboardPage() {
                     {analytics.total}
                   </motion.p>
                 </div>
-                <div className="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
-                  <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                 </div>
@@ -193,7 +193,7 @@ export default function DashboardPage() {
             <motion.div
               whileHover={{ scale: 1.02, y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-card border border-indigo-500/10 rounded-xl p-5 hover:border-indigo-500/30 transition-all duration-300 shadow-lg hover:shadow-indigo-500/5"
+              className="bg-card border border-primary/10 rounded-xl p-5 hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/5"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -210,9 +210,9 @@ export default function DashboardPage() {
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20"
+                  className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20"
                 >
-                  <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </motion.div>
@@ -223,7 +223,7 @@ export default function DashboardPage() {
             <motion.div
               whileHover={{ scale: 1.02, y: -2 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-card border border-indigo-500/10 rounded-xl p-5 hover:border-indigo-500/30 transition-all duration-300 shadow-lg hover:shadow-indigo-500/5"
+              className="bg-card border border-primary/10 rounded-xl p-5 hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/5"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -237,8 +237,8 @@ export default function DashboardPage() {
                     {analytics.completed}
                   </motion.p>
                 </div>
-                <div className="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
-                  <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -291,10 +291,10 @@ export default function DashboardPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-indigo-500/10 py-6 px-4 sm:px-6 lg:px-8 bg-card/30">
+      <footer className="border-t border-primary/10 py-6 px-4 sm:px-6 lg:px-8 bg-card/30">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-text text-sm">
-            © 2026 <span className="text-indigo-400">Taskify</span>. All rights reserved.
+            © 2026 <span className="text-primary-light">Taskify</span>. All rights reserved.
           </p>
         </div>
       </footer>

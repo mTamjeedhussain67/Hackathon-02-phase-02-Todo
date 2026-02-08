@@ -171,7 +171,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
-        className="bg-card/60 backdrop-blur-lg border border-indigo-500/20 rounded-2xl shadow-2xl p-6 sm:p-8"
+        className="bg-card/60 backdrop-blur-lg border border-primary/20 rounded-2xl shadow-2xl p-6 sm:p-8"
         data-testid="task-card"
       >
         <EditForm task={task} onSave={handleSave} onCancel={handleCancel} />
@@ -184,7 +184,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="bg-card/40 backdrop-blur-md border border-indigo-500/10 rounded-2xl shadow-xl hover:shadow-2xl hover:border-indigo-500/30 hover:scale-[1.01] transition-all duration-300 p-6 sm:p-8 group"
+      className="bg-card/40 backdrop-blur-md border border-primary/10 rounded-2xl shadow-xl hover:shadow-2xl hover:border-primary/30 hover:scale-[1.01] transition-all duration-300 p-6 sm:p-8 group"
       data-testid="task-card"
     >
       <div className="flex items-start gap-8">
@@ -222,7 +222,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
 
           {showExpandButton && (
             <button
-              className="text-sm text-indigo-400 hover:text-indigo-300 font-medium mb-2"
+              className="text-sm text-primary-light hover:text-indigo-300 font-medium mb-2"
               onClick={() => setIsExpanded(!isExpanded)}
             >
               {isExpanded ? 'Show less' : 'Show more'}
@@ -252,7 +252,7 @@ const TaskCardComponent: React.FC<TaskCardProps> = ({
         {/* Action buttons - right side */}
         <div className="flex flex-col sm:flex-row gap-3">
           <button
-            className="w-10 h-10 flex items-center justify-center rounded-lg bg-indigo-500/5 border border-indigo-500/20 hover:border-indigo-500/50 text-indigo-400 hover:text-indigo-300 transition-all duration-200"
+            className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/5 border border-primary/20 hover:border-primary/50 text-primary-light hover:text-indigo-300 transition-all duration-200"
             onClick={handleEditStart}
             aria-label="Edit task"
             data-testid="edit-button"

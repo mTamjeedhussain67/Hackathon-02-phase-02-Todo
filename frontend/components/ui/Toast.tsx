@@ -109,7 +109,7 @@ function ToastItem({
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`
         w-[320px] max-w-[calc(100vw-32px)]
-        bg-card border border-indigo-500/10 rounded-xl shadow-2xl
+        bg-card border border-primary/10 rounded-xl shadow-2xl
         px-6 py-4
         border-l-4 ${borderColor}
         flex items-start gap-3 backdrop-blur-sm

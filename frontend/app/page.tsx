@@ -41,14 +41,14 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-white selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-background text-white selection:bg-primary/30">
       {/* Shared Navbar */}
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-20 sm:pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Glow Blob */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full -z-10 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -64,7 +64,7 @@ export default function LandingPage() {
             >
               Organize Your Life,
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-primary">
                 One Task at a Time
               </span>
             </motion.h1>
@@ -87,14 +87,14 @@ export default function LandingPage() {
                 variant="primary"
                 onClick={handleStartFree}
                 disabled={isLoading}
-                className="text-base px-10 py-4 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/40 transition-all duration-300"
+                className="text-base px-10 py-4 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
               >
                 Start Free
               </Button>
               <Link href="/dashboard">
                 <Button
                   variant="secondary"
-                  className="text-base px-10 py-4 hover:bg-indigo-500/5 transition-all duration-300"
+                  className="text-base px-10 py-4 hover:bg-primary/5 transition-all duration-300"
                 >
                   View Dashboard
                 </Button>
@@ -112,10 +112,10 @@ export default function LandingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="bg-card/50 border border-indigo-500/10 rounded-2xl p-8 backdrop-blur-sm"
+            className="bg-card/50 border border-primary/10 rounded-2xl p-8 backdrop-blur-sm shadow-[0_0_50px_rgba(0,0,0,0.5)]"
           >
             <div className="text-center mb-8">
-              <h2 className="text-lg font-semibold text-indigo-400 mb-1 uppercase tracking-wider">
+              <h2 className="text-lg font-semibold text-primary mb-1 uppercase tracking-wider">
                 Trusted by Thousands
               </h2>
               <p className="text-sm text-gray-text">
@@ -129,7 +129,7 @@ export default function LandingPage() {
                 <div className="text-xs text-gray-text uppercase tracking-widest">Active Users</div>
               </div>
 
-              <div className="text-center border-t border-b sm:border-t-0 sm:border-b-0 sm:border-l sm:border-r border-indigo-500/10 py-4 sm:py-0">
+              <div className="text-center border-t border-b sm:border-t-0 sm:border-b-0 sm:border-l sm:border-r border-primary/10 py-4 sm:py-0">
                 <div className="text-3xl font-bold text-white mb-1">1.2M+</div>
                 <div className="text-xs text-gray-text uppercase tracking-widest">Tasks Completed</div>
               </div>
@@ -225,9 +225,9 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-card border border-indigo-500/10 rounded-2xl p-8 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/5 transition-all duration-300 group"
+                className="bg-card border border-primary/10 rounded-2xl p-8 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -243,8 +243,8 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-indigo-600/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
+      < section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" >
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -279,16 +279,16 @@ export default function LandingPage() {
             </Link>
           </div>
         </motion.div>
-      </section>
+      </section >
 
       {/* Footer */}
-      <footer id="footer" className="border-t border-indigo-500/10 py-16 px-4 sm:px-6 lg:px-8 mt-12 bg-card/30 backdrop-blur-sm">
+      < footer id="footer" className="border-t border-primary/10 py-16 px-4 sm:px-6 lg:px-8 mt-12 bg-card/30 backdrop-blur-sm" >
         <div className="max-w-6xl mx-auto text-center sm:text-left">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center justify-center sm:justify-start space-x-2 mb-4">
-                <span className="text-2xl text-indigo-500">⚡</span>
+                <span className="text-2xl text-primary">⚡</span>
                 <span className="text-2xl font-bold text-white tracking-tight">Taskify</span>
               </div>
               <p className="text-gray-text leading-relaxed text-sm">
@@ -301,17 +301,17 @@ export default function LandingPage() {
               <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Product</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/dashboard" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <Link href="/dashboard" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Dashboard
                   </Link>
                 </li>
                 <li>
-                  <a href="#features" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#features" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#stats" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#stats" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     About
                   </a>
                 </li>
@@ -323,17 +323,17 @@ export default function LandingPage() {
               <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Company</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Privacy Policy
                   </a>
                 </li>
@@ -345,17 +345,17 @@ export default function LandingPage() {
               <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Connect</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Twitter
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-text hover:text-indigo-400 transition-colors text-sm font-medium">
+                  <a href="#" className="text-gray-text hover:text-primary transition-colors text-sm font-medium">
                     Discord
                   </a>
                 </li>
@@ -364,7 +364,7 @@ export default function LandingPage() {
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-indigo-500/5 pt-8 text-center sm:flex sm:justify-between items-center">
+          <div className="border-t border-primary/5 pt-8 text-center sm:flex sm:justify-between items-center">
             <p className="text-gray-text text-sm mb-4 sm:mb-0">
               © 2026 Taskify. Built with passion for productivity.
             </p>
@@ -375,7 +375,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 }
